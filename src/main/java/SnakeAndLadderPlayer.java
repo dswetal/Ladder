@@ -1,6 +1,7 @@
 package main.java;
+
 /**
- * 
+ * This is the class to represent Player of Snake and Ladder game.
  * 
  * @author Swetal Desai
  * 
