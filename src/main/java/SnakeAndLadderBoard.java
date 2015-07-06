@@ -1,7 +1,14 @@
 package main.java;
+
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This is the Snake and Ladder Board class representing Board for the game.
+ * 
+ * @author Swetal
+ * 
+ */
 public class SnakeAndLadderBoard {
 
 	/**
@@ -9,6 +16,9 @@ public class SnakeAndLadderBoard {
 	 */
 	private final int FINISH_POSITION = 100;
 
+	/**
+	 * Regex to validate input.
+	 */
 	private final String inputRegex = "[1-6]{1}";
 
 	/**
@@ -40,12 +50,25 @@ public class SnakeAndLadderBoard {
 		mapSnakesAndLadders.put(99, 78);
 	}
 
+	/**
+	 * Returns singleton instance for the class.
+	 * 
+	 * @return
+	 */
 	public static SnakeAndLadderBoard getInstance() {
 
 		return snakeAndLadderBoard;
 
 	}
 
+	/**
+	 * Calculates new position on the board based on players current position
+	 * and new input.
+	 * 
+	 * @param currentPosition
+	 * @param input
+	 * @return New Position
+	 */
 	public int calculateNewPosition(int currentPosition, int input) {
 
 		int newPosition = currentPosition + input;
@@ -57,10 +80,23 @@ public class SnakeAndLadderBoard {
 
 	}
 
+	/**
+	 * This method will check if current position has reahced to the finish
+	 * line.
+	 * 
+	 * @param position
+	 * @return True or false
+	 */
 	public boolean isFinished(int position) {
 		return position == FINISH_POSITION;
 	}
 
+	/**
+	 * This method will validate user input.
+	 * 
+	 * @param input
+	 * @return True or False
+	 */
 	public boolean validateInput(String input) {
 		return input.matches(inputRegex);
 	}
