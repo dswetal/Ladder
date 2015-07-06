@@ -4,6 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * This is a runnable java class with main method for Snake And Ladder
+ * application.
+ * 
+ * @author Swetal Desai
+ * 
+ */
 public class Ladder {
 
 	private static SnakeAndLadderBoard snakeAndLadderBoard = SnakeAndLadderBoard
